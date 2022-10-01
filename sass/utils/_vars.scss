@@ -1,0 +1,44 @@
+:root {
+    /* Fonts */
+    --main-font: Roboto, sans-serif;
+    --secondary-font: Raleway, sans-serif;
+    /* Text colors */
+    --main-txt-cl: #212121;
+    --accent-txt-cl: #2196F3;
+    --logo-main-txt-cl: #000000;
+    --grey-txt-cl: #757575;
+    --grey-txt-cl-60: rgba(255, 255, 255, 0.6);
+    --light-txt-cl: #FFFFFF;
+    --placeholder-txt-cl: rgba(117, 117, 117, 0.5);
+    /* Background colors */
+    --main-bcg-cl: #FFFFFF;
+    --btn-bcg-cl: #2196F3;
+    --btn-bcg-cl-2: #188CE8;
+    --head-bcg-cl: #C4C4C4;
+    --overlay-modal: rgba(0, 0, 0, 0.2);
+    --overlay-cl: rgba(47, 48, 58, 0.4);
+    --overlay-cl-80: rgba(47, 48, 58, 0.8);
+    --footer-icon-bcg-cl: rgba(255, 255, 255, 0.1);
+    --black-bcg-cl: #2F303A;
+    --light-bcg-cl: #F5F4FA;
+    --border-first-cl: #ECECEC;
+    --border-secondary-cl: #EEEEEE;
+    --border-third-cl: rgba(255, 255, 255, 0.3);
+    --icon-cl: #AFB1B8;
+    --box-shadow-blc-cl-20: rgba(0, 0, 0, 0.20);
+    --box-shadow-blc-cl-16: rgba(0, 0, 0, 0.16);
+    --box-shadow-blc-cl-15: rgba(0, 0, 0, 0.15);
+    --box-shadow-blc-cl-14: rgba(0, 0, 0, 0.14);
+    --box-shadow-blc-cl-12: rgba(0, 0, 0, 0.12);
+    --box-shadow-blc-cl-10: rgba(0, 0, 0, 0.10);
+    --box-shadow-blc-cl-08: rgba(0, 0, 0, 0.08);
+    --box-shadow-blc-cl-06: rgba(0, 0, 0, 0.06);
+    --box-shadow-blc-cl-02: rgba(0, 0, 0, 0.02);
+    --prtl-thumb-overlay: rgba(33, 150, 243, 0.9);
+    --form-border-clr: rgba(33, 33, 33, 0.2);
+    /* Others */
+    --btn-radius: 4px;
+    --items: 3;
+    --indent: 30px;
+    --anim-fast: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}

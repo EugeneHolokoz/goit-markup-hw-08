@@ -1,0 +1,22 @@
+.footer-contacts__item {
+    margin-bottom: 9px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.footer-contacts__link {
+    color: var(--grey-txt-cl-60);
+    transition: color var(--anim-fast);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-txt-cl);
+    }
+}
+
+.footer-contacts__link--light-txt {
+    color: var(--light-txt-cl);
+}
+

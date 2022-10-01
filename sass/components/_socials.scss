@@ -1,0 +1,36 @@
+.socials {
+    @include flex($align: stretch);
+    gap: 10px;
+}
+
+.socials__link {
+    @include flex();
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    transition: background-color var(--anim-fast);
+
+    &:hover,
+    &:focus {
+        background-color: var(--accent-txt-cl);
+    }
+}
+
+.socials__link--dark-bg {
+    background-color: var(--footer-icon-bcg-cl);
+}
+
+.socials__icon {
+    fill: var(--icon-cl);
+    transition: fill var(--anim-fast);
+
+    .socials__link:hover &,
+    .socials__link:focus & {
+        fill: var(--light-txt-cl);
+    }
+}
+
+.socials__icon--light-cl {
+    fill: var(--light-txt-cl);
+}
+

@@ -1,0 +1,104 @@
+.filter {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.filter--margin-bottom {
+    margin-bottom: 50px;
+}
+
+.filter__btn {
+    @extend %btn;
+    padding: 6px 22px;
+    font-weight: 500;
+    line-height: calc(26 / 16);
+    letter-spacing: 0.03em;
+    color: var(--main-txt-cl);
+    background-color: var(--light-bcg-cl);
+    box-shadow: none;
+    transition: background-color var(--anim-fast), color var(--anim-fast), box-shadow var(--anim-fast);
+
+    &:hover,
+    &:focus {
+        color: var(--light-txt-cl);
+        background-color: var(--btn-bcg-cl);
+        box-shadow: 0px 3px 1px var(--box-shadow-blc-cl-10), 0px 1px 2px var(--box-shadow-blc-cl-08), 0px 2px 2px var(--box-shadow-blc-cl-12);
+    }
+}
+
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.portfolio__item {
+    flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+}
+
+.portfolio__link {
+    display: block;
+    text-decoration: none;
+    color: currentColor;
+    transition: box-shadow var(--anim-fast);
+
+    &:hover,
+    &:focus {
+        box-shadow: 0px 1px 1px var(--box-shadow-blc-cl-12), 0px 4px 4px var(--box-shadow-blc-cl-06), 1px 4px 6px var(--box-shadow-blc-cl-16);
+    }
+}
+
+.portfolio__thumb {
+    position: relative;
+    overflow: hidden;
+}
+
+.thumb-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    padding: 63px 24px;
+    background-color: var(--prtl-thumb-overlay);
+    transition: transform var(--anim-fast);
+
+    .portfolio__link:hover &,
+    .portfolio__link:focus & {
+        transform: translateY(0);
+    }
+
+}
+
+.thumb-overlay__desc {
+    font-size: 18px;
+    line-height: calc(28 / 18);
+    color: var(--light-txt-cl);
+}
+
+.portfolio__img-desc {
+    padding-top: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-secondary-cl);
+    border-left: 1px solid var(--border-secondary-cl);
+    border-right: 1px solid var(--border-secondary-cl);
+}
+
+.portfolio__img-title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: calc(36 / 18);
+    letter-spacing: 0.06em;
+    margin-bottom: 4px;
+}
+
+.portfolio__img-txt {
+    font-size: 16px;
+    line-height: calc(30 / 16);
+    letter-spacing: 0.03em;
+    color: var(--grey-txt-cl);
+}

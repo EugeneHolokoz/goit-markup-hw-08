@@ -1,0 +1,34 @@
+// utils styles
+@import "./utils/fonts";
+@import "./utils/normalize";
+@import "./utils/vars";
+@import "./utils/placeholders";
+@import "./utils/mixins";
+
+// base styles
+@import "./base/base";
+@import "./base/reset";
+@import "./base/container";
+@import "./base/section";
+
+// components styles
+@import "./components/logo";
+@import "./components/site-nav";
+@import "./components/header_contacts";
+@import "./components/backdrop";
+@import "./components/modal_window";
+@import "./components/reg-form";
+@import "./components/reg-form-agree";
+@import "./components/socials";
+@import "./components/footer_contacts";
+@import "./components/subscription";
+
+// layouts styles
+@import "./layouts/header";
+@import "./layouts/head";
+@import "./layouts/features";
+@import "./layouts/what-doing";
+@import "./layouts/team";
+@import "./layouts/customers";
+@import "./layouts/_footer";
+@import "./layouts/portfolio";

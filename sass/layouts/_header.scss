@@ -1,0 +1,24 @@
+.header {
+    border-bottom: 1px solid var(--border-first-cl);
+}
+
+.header__container {
+    @include flex($justify: flex-start);
+}
+
+.header__logo {
+    margin-right: 93px;
+}
+
+.header__logo--dark {
+    color: var(--logo-main-txt-cl);
+}
+
+.nav {
+    margin-right: auto;
+}
+
+.header__contacts {
+    @include flex($justify: flex-start, $align: stretch);
+    gap: 50px;
+}
