@@ -1,2 +1,2 @@
-# goit-markup-hw-07
-My repository for homework GoIT 07
+# goit-markup-hw-08
+My repository for homework GoIT 08
