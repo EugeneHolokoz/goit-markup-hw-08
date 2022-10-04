@@ -1,17 +1,37 @@
+.nav {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+        display: block;
+        margin-right: 90px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-right: auto;
+    }
+}
+
 .site-nav {
+    display: none;
+
+    @media screen and (min-width: 768px) {
     display: flex;
     gap: 50px;
     font-weight: 500;
     line-height: calc(16 / 14);
+    }
 }
 
 .site-nav__link {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+    position: relative;
+    display: block;
     padding-top: 32px;
     padding-bottom: 32px;
-    display: block;
-    align-items: center;
-    position: relative;
     transition: color var(--anim-fast);
+    }
 
     &:hover,
     &:focus {
@@ -20,7 +40,12 @@
 }
 
 .site-nav__link--active {
-    color: var(--accent-txt-cl);
+    display: none;
+
+    @media screen and (min-width: 768px) {
+        display: block;
+        color: var(--accent-txt-cl);
+    }
        
     &::after {
         content: "";

@@ -7,18 +7,18 @@
 }
 
 .header__logo {
-    margin-right: 93px;
+    margin-right: 0;
+    padding: 16px 0px;
+
+    @media screen and (min-width: 768px) {
+        margin-right: 87px;
+        padding: 0px 0px;
+    }
+    @media screen and (min-width: 1200px) {
+        margin-right: 92px;
+        }
 }
 
 .header__logo--dark {
     color: var(--logo-main-txt-cl);
-}
-
-.nav {
-    margin-right: auto;
-}
-
-.header__contacts {
-    @include flex($justify: flex-start, $align: stretch);
-    gap: 50px;
 }

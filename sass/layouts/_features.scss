@@ -1,15 +1,25 @@
 .features {
     display: flex;
     gap: 30px;
+    flex-wrap: wrap;
 }
 
 .hidden {
     @extend %visually-hidden;
 }
 
+.features__item {
+    @media screen and (min-width: 768px) {
+        flex-basis: calc((100% - 30px) / 2);
+    }
+    
+    @media screen and (min-width: 1200px) {
+        flex-basis: calc((100% - 90px) / 4);
+    }
+}
+
 .features__wrap {
     @include flex();
-    width: 270px;
     height: 120px;
     border-radius: 4px;
     background-color: var(--light-bcg-cl);
@@ -21,10 +31,14 @@
     font-size: 14px;
     font-weight: 700;
     line-height: calc(16 / 14);
+    text-align: center;
     text-transform: uppercase;
+
+    @media screen and (min-width: 768px) {
+    text-align: left;
+    }
 }
 
 .features__desc {
-    width: 270px;
     color: var(--grey-txt-cl);
 }

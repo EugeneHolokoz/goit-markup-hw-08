@@ -10,39 +10,90 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body class="page-portfolio">
-    <header class="header">
-  <div class="container header__container">
-    <a class="logo header__logo" href="./index.html" lang="en">Web<span class="logo header__logo--dark">Studio</span></a>
-    <nav class="nav">
-      <ul class="site-nav">
-        <li class="site-nav__item">
-          <a class="site-nav__link" href="./index.html">Студія</a>
+  <header class="header block">
+    <div class="container header__container">
+      <a class="logo header__logo" href="./index.html" lang="en">Web<span
+          class="logo header__logo--dark">Studio</span></a>
+      <nav class="nav">
+        <ul class="site-nav">
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="./index.html">Студія</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link site-nav__link--active" href="./portfolio.html">Портфоліо</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="">Контакти</a>
+          </li>
+        </ul>
+      </nav>
+      <ul class="contacts header__contacts">
+        <li class="contacts__item">
+          <a class="contacts__link" href="mailto:info@devstudio.com" lang="en">
+            <svg class="contacts__icon" width="16" height="12">
+              <use href="./images/icons.svg#icon-envelope"></use>
+            </svg>
+            info@devstudio.com</a>
         </li>
-        <li class="site-nav__item">
-          <a class="site-nav__link site-nav__link--active" href="./portfolio.html">Портфоліо</a>
-        </li>
-        <li class="site-nav__item">
-          <a class="site-nav__link" href="">Контакти</a>
+        <li class="contacts__item">
+          <a class="contacts__link" href="tel:+380961111111">
+            <svg class="contacts__icon" width="10" height="16">
+              <use href="./images/icons.svg#icon-smartphone"></use>
+            </svg>+38 096 111 11 11</a>
         </li>
       </ul>
-    </nav>
-    <ul class="contacts header__contacts">
-      <li class="contacts__item">
-        <a class="contacts__link" href="mailto:info@devstudio.com" lang="en">
-          <svg class="contacts__icon" width="16" height="12">
-            <use href="./images/icons.svg#icon-envelope"></use>
-          </svg>
-          info@devstudio.com</a>
-      </li>
-      <li class="contacts__item">
-        <a class="contacts__link" href="tel:+380961111111">
-          <svg class="contacts__icon" width="10" height="16">
-            <use href="./images/icons.svg#icon-smartphone"></use>
-          </svg>+38 096 111 11 11</a>
-      </li>
-    </ul>
-  </div>
-    </header>
+      <button class="menu-btn js-open-menu" type="button" aria-expanded="false" aria-controls="mobile-menu">
+        <svg width="40" height="40">
+          <use href="./images/icons.svg#icon-menu_open"></use>
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg class="menu-toggle__icon" width="40" height="40">
+          <use href="./images/icons.svg#icon-menu_close"></use>
+        </svg>
+      </button>
+      <ul class="mobile-menu">
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="./index.html">Студія</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link mobile-menu__link--active" href="./portfolio.html">Портфоліо</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="/index.html">Контакти</a>
+        </li>
+      </ul>
+      <ul class="mobile-contacts">
+        <li class="mobile-contacts__item">
+          <a class="mobile-contacts__link mobile-contacts__link--accent" href="tel:+380961111111">+38 096 111 11 11</a>
+        </li>
+        <li class="mobile-contacts__item">
+          <a class="mobile-contacts__link" href="mailto:info@devstudio.com" lang="en">info@devstudio.com</a>
+        </li>
+      </ul>
+      <ul class="mobile-socials">
+        <li class="mobile-socials__item">
+          <a class="mobile-socials__link mobile-socials__link--bordered" href="https://instagram.com" target="_blank"
+            rel="noopener noreferrer" aria-label="Instagram" lang="en">Instagram</a>
+        </li>
+        <li class="mobile-socials__item">
+          <a class="mobile-socials__link mobile-socials__link--bordered" href="https://twitter.com" target="_blank"
+            rel="noopener noreferrer" aria-label="Twitter" lang="en">Twitter</a>
+        </li>
+        <li class="mobile-socials__item">
+          <a class="mobile-socials__link mobile-socials__link--bordered" href="https://facebook.com" target="_blank"
+            rel="noopener noreferrer" aria-label="Facebook" lang="en">Facebook</a>
+        </li>
+        <li class="mobile-socials__item">
+          <a class="mobile-socials__link" href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+            aria-label="LinkedIn" lang="en">LinkedIn</a>
+        </li>
+      </ul>
+    </div>
+  </header>
     <main>
       <!--Portfolio-->
       <section class="section">
@@ -69,13 +120,21 @@
           <li class="portfolio__item">
             <a class="portfolio__link" href="" target="_blank" rel="noopener noreferrer">
             <div class="portfolio__thumb">
-              <img
-              class="portfolio__img"
-              src="./images/portfolio-img/portfolio-img-1.jpg"
-              alt="Website screen"
-              width="370"
-              height="295"
-            />
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="./images/portfolio-img/img-1-lg-@1x.webp 1x, ./images/portfolio-img/img-1-lg-@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 1200px)"
+                srcset="./images/portfolio-img/img-1-lg-@1x.jpg 1x, ./images/portfolio-img/img-1-lg-@2x.jpg 2x" type="image/jpg">
+              <source media="(min-width: 768px)"
+                srcset="./images/portfolio-img/img-1-md-@1x.webp 1x, ./images/portfolio-img/img-1-md-@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 768px)" srcset="./images/portfolio-img/img-1-md-@1x.jpg 1x, ./images/portfolio-img/img-1-md-@2x.jpg 2x"
+                type="image/jpg">
+              <source media="(max-width: 767px)"
+                srcset="./images/portfolio-img/img-1-sm-@1x.webp 1x, ./images/portfolio-img/img-1-sm-@2x.webp 2x" type="image/webp">
+              <source media="(max-width: 767px)" srcset="./images/portfolio-img/img-1-sm-@1x.jpg 1x, ./images/portfolio-img/img-1-sm-@2x.jpg 2x"
+                type="image/jpg">
+              <img class="portfolio__img" src="./images/portfolio-img/img-1-sm-@1x.jpg 1x" alt="Website screen" />
+            </picture>
             <div class="thumb-overlay">
               <p class="thumb-overlay__desc">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
                 дозволить відвідувачу отримати
@@ -91,13 +150,21 @@
           <li class="portfolio__item">
             <a class="portfolio__link" href="" target="_blank" rel="noopener noreferrer">
             <div class="portfolio__thumb">
-              <img
-              class="portfolio__img"
-              src="./images/portfolio-img/portfolio-img-2.jpg"
-              alt="Poster screen"
-              width="370"
-              height="295"
-            />
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="./images/portfolio-img/img-2-lg-@1x.webp 1x, ./images/portfolio-img/img-2-lg-@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 1200px)"
+                srcset="./images/portfolio-img/img-2-lg-@1x.jpg 1x, ./images/portfolio-img/img-2-lg-@2x.jpg 2x" type="image/jpg">
+              <source media="(min-width: 768px)"
+                srcset="./images/portfolio-img/img-2-md-@1x.webp 1x, ./images/portfolio-img/img-2-md-@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 768px)"
+                srcset="./images/portfolio-img/img-2-md-@1x.jpg 1x, ./images/portfolio-img/img-2-md-@2x.jpg 2x" type="image/jpg">
+              <source media="(max-width: 767px)"
+                srcset="./images/portfolio-img/img-2-sm-@1x.webp 1x, ./images/portfolio-img/img-2-sm-@2x.webp 2x" type="image/webp">
+              <source media="(max-width: 767px)"
+                srcset="./images/portfolio-img/img-2-sm-@1x.jpg 1x, ./images/portfolio-img/img-2-sm-@2x.jpg 2x" type="image/jpg">
+              <img class="portfolio__img" src="./images/portfolio-img/img-2-sm-@1x.jpg 1x" alt="Poster screen" />
+            </picture>
             <div class="thumb-overlay">
               <p class="thumb-overlay__desc">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
                             дозволить відвідувачу отримати
@@ -113,13 +180,21 @@
           <li class="portfolio__item">
             <a class="portfolio__link" href="" target="_blank" rel="noopener noreferrer">
             <div class="portfolio__thumb">
-            <img
-              class="portfolio__img"
-              src="./images/portfolio-img/portfolio-img-3.jpg"
-              alt="Application screen"
-              width="370"
-              height="295"
-            />
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="./images/portfolio-img/img-3-lg-@1x.webp 1x, ./images/portfolio-img/img-3-lg-@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 1200px)"
+                srcset="./images/portfolio-img/img-3-lg-@1x.jpg 1x, ./images/portfolio-img/img-3-lg-@2x.jpg 2x" type="image/jpg">
+              <source media="(min-width: 768px)"
+                srcset="./images/portfolio-img/img-3-md-@1x.webp 1x, ./images/portfolio-img/img-3-md-@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 768px)"
+                srcset="./images/portfolio-img/img-3-md-@1x.jpg 1x, ./images/portfolio-img/img-3-md-@2x.jpg 2x" type="image/jpg">
+              <source media="(max-width: 767px)"
+                srcset="./images/portfolio-img/img-3-sm-@1x.webp 1x, ./images/portfolio-img/img-3-sm-@2x.webp 2x" type="image/webp">
+              <source media="(max-width: 767px)"
+                srcset="./images/portfolio-img/img-3-sm-@1x.jpg 1x, ./images/portfolio-img/img-3-sm-@2x.jpg 2x" type="image/jpg">
+              <img class="portfolio__img" src="./images/portfolio-img/img-3-sm-@1x.jpg 1x" alt="Application screen" />
+            </picture>
             <div class="thumb-overlay">
               <p class="thumb-overlay__desc">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
                             дозволить відвідувачу отримати
@@ -135,13 +210,21 @@
           <li class="portfolio__item">
             <a class="portfolio__link" href="" target="_blank" rel="noopener noreferrer">
             <div class="portfolio__thumb">
-              <img
-              class="portfolio__img"
-              src="./images/portfolio-img/portfolio-img-4.jpg"
-              alt="Marketing project"
-              width="370"
-              height="295"
-            />
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="./images/portfolio-img/img-4-lg-@1x.webp 1x, ./images/portfolio-img/img-4-lg-@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 1200px)"
+                srcset="./images/portfolio-img/img-4-lg-@1x.jpg 1x, ./images/portfolio-img/img-4-lg-@2x.jpg 2x" type="image/jpg">
+              <source media="(min-width: 768px)"
+                srcset="./images/portfolio-img/img-4-md-@1x.webp 1x, ./images/portfolio-img/img-4-md-@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 768px)"
+                srcset="./images/portfolio-img/img-4-md-@1x.jpg 1x, ./images/portfolio-img/img-4-md-@2x.jpg 2x" type="image/jpg">
+              <source media="(max-width: 767px)"
+                srcset="./images/portfolio-img/img-4-sm-@1x.webp 1x, ./images/portfolio-img/img-4-sm-@2x.webp 2x" type="image/webp">
+              <source media="(max-width: 767px)"
+                srcset="./images/portfolio-img/img-4-sm-@1x.jpg 1x, ./images/portfolio-img/img-4-sm-@2x.jpg 2x" type="image/jpg">
+              <img class="portfolio__img" src="./images/portfolio-img/img-4-sm-@1x.jpg 1x" alt="Marketing project" />
+            </picture>
             <div class="thumb-overlay">
               <p class="thumb-overlay__desc">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
                             дозволить відвідувачу отримати
@@ -157,13 +240,21 @@
           <li class="portfolio__item">
             <a class="portfolio__link" href="" target="_blank" rel="noopener noreferrer">
             <div class="portfolio__thumb">
-              <img
-              class="portfolio__img"
-              src="./images/portfolio-img/portfolio-img-5.jpg"
-              alt="Application screen"
-              width="370"
-              height="295"
-            />
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="./images/portfolio-img/img-5-lg-@1x.webp 1x, ./images/portfolio-img/img-5-lg-@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 1200px)"
+                srcset="./images/portfolio-img/img-5-lg-@1x.jpg 1x, ./images/portfolio-img/img-5-lg-@2x.jpg 2x" type="image/jpg">
+              <source media="(min-width: 768px)"
+                srcset="./images/portfolio-img/img-5-md-@1x.webp 1x, ./images/portfolio-img/img-5-md-@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 768px)"
+                srcset="./images/portfolio-img/img-5-md-@1x.jpg 1x, ./images/portfolio-img/img-5-md-@2x.jpg 2x" type="image/jpg">
+              <source media="(max-width: 767px)"
+                srcset="./images/portfolio-img/img-5-sm-@1x.webp 1x, ./images/portfolio-img/img-5-sm-@2x.webp 2x" type="image/webp">
+              <source media="(max-width: 767px)"
+                srcset="./images/portfolio-img/img-5-sm-@1x.jpg 1x, ./images/portfolio-img/img-5-sm-@2x.jpg 2x" type="image/jpg">
+              <img class="portfolio__img" src="./images/portfolio-img/img-5-sm-@1x.jpg 1x" alt="Application screen" />
+            </picture>
             <div class="thumb-overlay">
               <p class="thumb-overlay__desc">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
                             дозволить відвідувачу отримати
@@ -179,13 +270,21 @@
           <li class="portfolio__item">
             <a class="portfolio__link" href="" target="_blank" rel="noopener noreferrer">
             <div class="portfolio__thumb">
-              <img
-              class="portfolio__img"
-              src="./images/portfolio-img/portfolio-img-6.jpg"
-              alt="Website screen"
-              width="370"
-              height="295"
-            />
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="./images/portfolio-img/img-6-lg-@1x.webp 1x, ./images/portfolio-img/img-6-lg-@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 1200px)"
+                srcset="./images/portfolio-img/img-6-lg-@1x.jpg 1x, ./images/portfolio-img/img-6-lg-@2x.jpg 2x" type="image/jpg">
+              <source media="(min-width: 768px)"
+                srcset="./images/portfolio-img/img-6-md-@1x.webp 1x, ./images/portfolio-img/img-6-md-@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 768px)"
+                srcset="./images/portfolio-img/img-6-md-@1x.jpg 1x, ./images/portfolio-img/img-6-md-@2x.jpg 2x" type="image/jpg">
+              <source media="(max-width: 767px)"
+                srcset="./images/portfolio-img/img-6-sm-@1x.webp 1x, ./images/portfolio-img/img-6-sm-@2x.webp 2x" type="image/webp">
+              <source media="(max-width: 767px)"
+                srcset="./images/portfolio-img/img-6-sm-@1x.jpg 1x, ./images/portfolio-img/img-6-sm-@2x.jpg 2x" type="image/jpg">
+              <img class="portfolio__img" src="./images/portfolio-img/img-6-sm-@1x.jpg 1x" alt="Website screen" />
+            </picture>
             <div class="thumb-overlay">
               <p class="thumb-overlay__desc">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
                             дозволить відвідувачу отримати
@@ -201,13 +300,21 @@
           <li class="portfolio__item">
             <a class="portfolio__link" href="" target="_blank" rel="noopener noreferrer">
             <div class="portfolio__thumb">
-              <img
-              class="portfolio__img"
-              src="./images/portfolio-img/portfolio-img-7.jpg"
-              alt="Poster screen"
-              width="370"
-              height="295"
-            />
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="./images/portfolio-img/img-7-lg-@1x.webp 1x, ./images/portfolio-img/img-7-lg-@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 1200px)"
+                srcset="./images/portfolio-img/img-7-lg-@1x.jpg 1x, ./images/portfolio-img/img-7-lg-@2x.jpg 2x" type="image/jpg">
+              <source media="(min-width: 768px)"
+                srcset="./images/portfolio-img/img-7-md-@1x.webp 1x, ./images/portfolio-img/img-7-md-@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 768px)"
+                srcset="./images/portfolio-img/img-7-md-@1x.jpg 1x, ./images/portfolio-img/img-7-md-@2x.jpg 2x" type="image/jpg">
+              <source media="(max-width: 767px)"
+                srcset="./images/portfolio-img/img-7-sm-@1x.webp 1x, ./images/portfolio-img/img-7-sm-@2x.webp 2x" type="image/webp">
+              <source media="(max-width: 767px)"
+                srcset="./images/portfolio-img/img-7-sm-@1x.jpg 1x, ./images/portfolio-img/img-7-sm-@2x.jpg 2x" type="image/jpg">
+              <img class="portfolio__img" src="./images/portfolio-img/img-7-sm-@1x.jpg 1x" alt="Poster screen" />
+            </picture>
             <div class="thumb-overlay">
               <p class="thumb-overlay__desc">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
                             дозволить відвідувачу отримати
@@ -223,13 +330,21 @@
           <li class="portfolio__item">
             <a class="portfolio__link" href="" target="_blank" rel="noopener noreferrer">
             <div class="portfolio__thumb">
-              <img
-              class="portfolio__img"
-              src="./images/portfolio-img/portfolio-img-8.jpg"
-              alt="Marketing project"
-              width="370"
-              height="295"
-            />
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="./images/portfolio-img/img-8-lg-@1x.webp 1x, ./images/portfolio-img/img-8-lg-@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 1200px)"
+                srcset="./images/portfolio-img/img-8-lg-@1x.jpg 1x, ./images/portfolio-img/img-8-lg-@2x.jpg 2x" type="image/jpg">
+              <source media="(min-width: 768px)"
+                srcset="./images/portfolio-img/img-8-md-@1x.webp 1x, ./images/portfolio-img/img-8-md-@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 768px)"
+                srcset="./images/portfolio-img/img-8-md-@1x.jpg 1x, ./images/portfolio-img/img-8-md-@2x.jpg 2x" type="image/jpg">
+              <source media="(max-width: 767px)"
+                srcset="./images/portfolio-img/img-8-sm-@1x.webp 1x, ./images/portfolio-img/img-8-sm-@2x.webp 2x" type="image/webp">
+              <source media="(max-width: 767px)"
+                srcset="./images/portfolio-img/img-8-sm-@1x.jpg 1x, ./images/portfolio-img/img-8-sm-@2x.jpg 2x" type="image/jpg">
+              <img class="portfolio__img" src="./images/portfolio-img/img-8-sm-@1x.jpg 1x" alt="Marketing project" />
+            </picture>
             <div class="thumb-overlay">
               <p class="thumb-overlay__desc">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
                             дозволить відвідувачу отримати
@@ -245,13 +360,21 @@
           <li class="portfolio__item">
             <a class="portfolio__link" href="" target="_blank" rel="noopener noreferrer">
             <div class="portfolio__thumb">
-              <img
-              class="portfolio__img"
-              src="./images/portfolio-img/portfolio-img-9.jpg"
-              alt="Application screen"
-              width="370"
-              height="295"
-            />
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="./images/portfolio-img/img-9-lg-@1x.webp 1x, ./images/portfolio-img/img-9-lg-@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 1200px)"
+                srcset="./images/portfolio-img/img-9-lg-@1x.jpg 1x, ./images/portfolio-img/img-9-lg-@2x.jpg 2x" type="image/jpg">
+              <source media="(min-width: 768px)"
+                srcset="./images/portfolio-img/img-9-md-@1x.webp 1x, ./images/portfolio-img/img-9-md-@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 768px)"
+                srcset="./images/portfolio-img/img-9-md-@1x.jpg 1x, ./images/portfolio-img/img-9-md-@2x.jpg 2x" type="image/jpg">
+              <source media="(max-width: 767px)"
+                srcset="./images/portfolio-img/img-9-sm-@1x.webp 1x, ./images/portfolio-img/img-9-sm-@2x.webp 2x" type="image/webp">
+              <source media="(max-width: 767px)"
+                srcset="./images/portfolio-img/img-9-sm-@1x.jpg 1x, ./images/portfolio-img/img-9-sm-@2x.jpg 2x" type="image/jpg">
+              <img class="portfolio__img" src="./images/portfolio-img/img-9-sm-@1x.jpg 1x" alt="Application screen" />
+            </picture>
             <div class="thumb-overlay">
               <p class="thumb-overlay__desc">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
                             дозволить відвідувачу отримати
@@ -269,8 +392,9 @@
       </section>
     </main>
     <!-- Footer -->
-    <footer class="footer">
+  <footer class="footer">
     <div class="container footer__container">
+      <div class="tablet-wrap">
       <div class="logo-adress-wrap">
         <a class="logo footer__logo" href="./index.html" lang="en">Web<span class="logo footer__logo--light">Studio</span></a>
         <address class="address">
@@ -323,6 +447,7 @@
           </li>
         </ul>
       </div>
+      </div>
       <form class="subscription" name="subscription">
         <strong class="footer__title">Підпишіться на розсилку</strong>
         <div class="subscription-group">
@@ -337,6 +462,10 @@
         </div>
       </form>
     </div>
-    </footer>
+  </footer>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>

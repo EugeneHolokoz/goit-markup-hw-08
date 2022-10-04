@@ -40,6 +40,47 @@
             </svg>+38 096 111 11 11</a>
         </li>
       </ul>
+      <button class="menu-btn js-open-menu" type="button" aria-expanded="false" aria-controls="mobile-menu">
+        <svg width="40" height="40">
+          <use href="./images/icons.svg#icon-menu_open"></use>
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+       <svg class="menu-toggle__icon" width="40" height="40">
+        <use href="./images/icons.svg#icon-menu_close"></use>
+       </svg>
+      </button>
+      <ul class="mobile-menu">
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link mobile-menu__link--active" href="./index.html">Студія</a></li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="./portfolio.html">Портфоліо</a></li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="/index.html">Контакти</a></li>       
+      </ul>
+      <ul class="mobile-contacts">
+        <li class="mobile-contacts__item">
+          <a class="mobile-contacts__link mobile-contacts__link--accent" href="tel:+380961111111">+38 096 111 11 11</a></li>
+        <li class="mobile-contacts__item">
+          <a class="mobile-contacts__link" href="mailto:info@devstudio.com" lang="en">info@devstudio.com</a></li>
+      </ul>
+      <ul class="mobile-socials">
+        <li class="mobile-socials__item">
+          <a class="mobile-socials__link mobile-socials__link--bordered" href="https://instagram.com" target="_blank"
+                  rel="noopener noreferrer" aria-label="Instagram" lang="en">Instagram</a></li>
+        <li class="mobile-socials__item">
+          <a class="mobile-socials__link mobile-socials__link--bordered" href="https://twitter.com" target="_blank"
+                  rel="noopener noreferrer" aria-label="Twitter" lang="en">Twitter</a></li>
+        <li class="mobile-socials__item">
+          <a class="mobile-socials__link mobile-socials__link--bordered"  href="https://facebook.com" target="_blank"
+                  rel="noopener noreferrer" aria-label="Facebook" lang="en">Facebook</a></li>
+        <li class="mobile-socials__item">
+          <a class="mobile-socials__link" href="https://linkedin.com" target="_blank"
+                  rel="noopener noreferrer" aria-label="LinkedIn" lang="en">LinkedIn</a></li>
+      </ul>
     </div>
   </header>
   <main>
@@ -163,19 +204,28 @@
         <h2 class="section__title">Чим ми займаємося</h2>
         <ul class="what-doing">
           <li class="what-doing__item">
-            <img class="what-doing__img" src="./images/about/box-1.jpg" alt="Coding on pc" width="370" height="295" />
+            <img class="what-doing__img" 
+              srcset="./images/about/img-lg-@1x.jpg 1x, ./images/about/img-lg-@2x.jpg 2x"
+              src="./images/about/img-lg-@1x.jpg" 
+              alt="Coding on pc" />
             <div class="what-doing__img-wrap">
               <h3 class="what-doing__img-title">дестктопні додатки</h3>
             </div>
           </li>
           <li class="what-doing__item">
-            <img class="what-doing__img" src="./images/about/box-2.jpg" alt="Coding on phone" width="370" height="295" />
+            <img class="what-doing__img"
+              srcset="./images/about/img2-lg-@1x.jpg 1x, ./images/about/img2-lg-@2x.jpg 2x"
+              src="./images/about/img2-lg-@1x.jpg"  
+            alt="Coding on phone" />
             <div class="what-doing__img-wrap">
               <h3 class="what-doing__img-title">Мобільні додатки</h3>
             </div>
           </li>
           <li class="what-doing__item">
-            <img class="what-doing__img" src="./images/about/box-3.jpg" alt="Coding on tablet" width="370" height="295" />
+            <img class="what-doing__img"
+              srcset="./images/about/img3-lg-@1x.jpg 1x, ./images/about/img3-lg-@2x.jpg 2x"
+              src="./images/about/img3-lg-@1x.jpg"   
+            alt="Coding on tablet" />
             <div class="what-doing__img-wrap">
               <h3 class="what-doing__img-title">Дизайнерські рішення</h3>
             </div>
@@ -189,8 +239,29 @@
         <h2 class="section__title">Наша команда</h2>
         <ul class="team">
           <li class="team__item">
-            <img class="team__img" src="./images/our_team/product-designer.jpg" alt="product designer" width="270"
-              height="260" />
+            <picture>
+              <source media="(min-width: 1200px)" 
+                srcset="./images/our_team/img-1-lg-@1x.webp 1x, ./images/our_team/img-1-lg-@2x.webp 2x"
+                type="image/webp">
+              <source media="(min-width: 1200px)"
+                srcset="./images/our_team/img-1-lg-@1x.jpg 1x, ./images/our_team/img-1-lg-@2x.jpg 2x"
+                type="image/jpg">
+              <source media="(min-width: 768px)"
+                srcset="./images/our_team/img-1-md-@1x.webp 1x, ./images/our_team/img-1-md-@2x.webp 2x"
+                type="image/webp">
+              <source media="(min-width: 768px)" 
+                srcset="./images/our_team/img-1-md-@1x.jpg 1x, ./images/our_team/img-1-md-@2x.jpg 2x"
+                type="image/jpg">
+              <source media="(max-width: 767px)" 
+                srcset="./images/our_team/img-1-sm-@1x.webp 1x, ./images/our_team/img-1-sm-@2x.webp 2x"
+                type="image/webp">
+              <source media="(max-width: 767px)"
+                srcset="./images/our_team/img-1-sm-@1x.jpg 1x, ./images/our_team/img-1-sm-@2x.jpg 2x"
+                type="image/jpg">
+              <img class="team__img"
+                src="./images/our_team/img-1-sm-@1x.jpg 1x"
+                alt="product designer"/>
+              </picture>
             <div class="team__wrap">
             <h3 class="team__title">Ігор Дем'яненко</h3>
             <p class="team__desc" lang="en">Product Designer</p>
@@ -223,8 +294,21 @@
             </div>
           </li>
           <li class="team__item">
-            <img class="team__img" src="./images/our_team/frontend-developer.jpg" alt="frontend developer" width="270"
-              height="260" />
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="./images/our_team/img-2-lg-@1x.webp 1x, ./images/our_team/img-2-lg-@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 1200px)"
+                srcset="./images/our_team/img-2-lg-@1x.jpg 1x, ./images/our_team/img-2-lg-@2x.jpg 2x" type="image/jpg">
+              <source media="(min-width: 768px)"
+                srcset="./images/our_team/img-2-md-@1x.webp 1x, ./images/our_team/img-2-md-@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 768px)"
+                srcset="./images/our_team/img-2-md-@1x.jpg 1x, ./images/our_team/img-2-md-@2x.jpg 2x" type="image/jpg">
+              <source media="(max-width: 767px)"
+                srcset="./images/our_team/img-2-sm-@1x.webp 1x, ./images/our_team/img-2-sm-@2x.webp 2x" type="image/webp">
+              <source media="(max-width: 767px)"
+                srcset="./images/our_team/img-2-sm-@1x.jpg 1x, ./images/our_team/img-2-sm-@2x.jpg 2x" type="image/jpg">
+              <img class="team__img" src="./images/our_team/img-2-sm-@1x.jpg 1x" alt="frontend developer" />
+            </picture>
             <div class="team__wrap">
             <h3 class="team__title">Ольга Рєпіна</h3>
             <p class="team__desc" lang="en">Frontend Developer</p>
@@ -257,8 +341,21 @@
             </div>
           </li>
           <li class="team__item">
-            <img class="team__img" src="./images/our_team/marketing-specialist.jpg" alt="marketing-specialist"
-              width="270" height="260" />
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="./images/our_team/img-3-lg-@1x.webp 1x, ./images/our_team/img-3-lg-@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 1200px)"
+                srcset="./images/our_team/img-3-lg-@1x.jpg 1x, ./images/our_team/img-3-lg-@2x.jpg 2x" type="image/jpg">
+              <source media="(min-width: 768px)"
+                srcset="./images/our_team/img-3-md-@1x.webp 1x, ./images/our_team/img-3-md-@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 768px)"
+                srcset="./images/our_team/img-3-md-@1x.jpg 1x, ./images/our_team/img-3-md-@2x.jpg 2x" type="image/jpg">
+              <source media="(max-width: 767px)"
+                srcset="./images/our_team/img-3-sm-@1x.webp 1x, ./images/our_team/img-3-sm-@2x.webp 2x" type="image/webp">
+              <source media="(max-width: 767px)"
+                srcset="./images/our_team/img-3-sm-@1x.jpg 1x, ./images/our_team/img-3-sm-@2x.jpg 2x" type="image/jpg">
+              <img class="team__img" src="./images/our_team/img-3-sm-@1x.jpg 1x" alt="marketing-specialist" />
+            </picture>
             <div class="team__wrap">
               <h3 class="team__title">Микола Тарасов</h3>
               <p class="team__desc" lang="en">Marketing</p>
@@ -291,8 +388,21 @@
             </div>
           </li>
           <li class="team__item">
-            <img class="team__img" src="./images/our_team/ui-designer.jpg" alt="ui designer" width="270"
-              height="260" />
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="./images/our_team/img-4-lg-@1x.webp 1x, ./images/our_team/img-4-lg-@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 1200px)"
+                srcset="./images/our_team/img-4-lg-@1x.jpg 1x, ./images/our_team/img-4-lg-@2x.jpg 2x" type="image/jpg">
+              <source media="(min-width: 768px)"
+                srcset="./images/our_team/img-4-md-@1x.webp 1x, ./images/our_team/img-4-md-@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 768px)"
+                srcset="./images/our_team/img-4-md-@1x.jpg 1x, ./images/our_team/img-4-md-@2x.jpg 2x" type="image/jpg">
+              <source media="(max-width: 767px)"
+                srcset="./images/our_team/img-4-sm-@1x.webp 1x, ./images/our_team/img-4-sm-@2x.webp 2x" type="image/webp">
+              <source media="(max-width: 767px)"
+                srcset="./images/our_team/img-4-sm-@1x.jpg 1x, ./images/our_team/img-4-sm-@2x.jpg 2x" type="image/jpg">
+              <img class="team__img" src="./images/our_team/img-4-sm-@1x.jpg 1x" alt="ui designer" />
+            </picture>
             <div class="team__wrap">
               <h3 class="team__title">Михайло Єрмаков</h3>
               <p class="team__desc" lang="en">UI Designer</p>
@@ -369,6 +479,7 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container footer__container">
+      <div class="tablet-wrap">
       <div class="logo-adress-wrap">
         <a class="logo footer__logo" href="./index.html" lang="en">Web<span class="logo footer__logo--light">Studio</span></a>
         <address class="address">
@@ -421,6 +532,7 @@
           </li>
         </ul>
       </div>
+      </div>
       <form class="subscription" name="subscription">
         <strong class="footer__title">Підпишіться на розсилку</strong>
         <div class="subscription-group">
@@ -437,5 +549,9 @@
     </div>
   </footer>
   <script src="./js/modal.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+    crossorigin="anonymous"></script>
+  <script defer src="./js/mobile-menu.js"></script>
 </body>
 </html>

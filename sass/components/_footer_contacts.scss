@@ -1,8 +1,13 @@
 .footer-contacts__item {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
+    text-align: center;
+
+    @media screen and (min-width: 1200px) {
+        text-align: left;
+    }
 
     &:last-child {
-        margin-bottom: 0;
+        margin-bottom: 0px;
     }
 }
 
@@ -19,4 +24,6 @@
 .footer-contacts__link--light-txt {
     color: var(--light-txt-cl);
 }
+
+
 
