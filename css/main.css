@@ -1280,6 +1280,7 @@ address {
   background-color: var(--head-bcg-cl);
   background-image: -webkit-gradient(linear, left top, right top, from(var(--overlay-cl)), to(var(--overlay-cl))), url(../images/head_bckg/header_img_sm-@1x.png);
   background-image: linear-gradient(to right, var(--overlay-cl), var(--overlay-cl)), url(../images/head_bckg/header_img_sm-@1x.png);
+  background-image: -webkit-image-set(url(../images/head_bckg/header_img_sm-@1x.webp) 1x);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1288,30 +1289,35 @@ address {
   .head {
     background-image: -webkit-gradient(linear, left top, right top, from(var(--overlay-cl)), to(var(--overlay-cl))), url(../images/head_bckg/header_img_sm-@2x.png);
     background-image: linear-gradient(to right, var(--overlay-cl), var(--overlay-cl)), url(../images/head_bckg/header_img_sm-@2x.png);
+    background-image: -webkit-image-set(url(../images/head_bckg/header_img_sm-@2x.webp) 2x);
   }
 }
 @media screen and (min-width: 481px) {
   .head {
     background-image: -webkit-gradient(linear, left top, right top, from(var(--overlay-cl)), to(var(--overlay-cl))), url(../images/head_bckg/header_img_md-@1x.png);
     background-image: linear-gradient(to right, var(--overlay-cl), var(--overlay-cl)), url(../images/head_bckg/header_img_md-@1x.png);
+    background-image: -webkit-image-set(url(../images/head_bckg/header_img_md-@1x.webp) 1x);
   }
 }
 @media screen and (min-width: 481px) and (min-device-pixel-ratio: 2), screen and (min-width: 481px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 481px) and (min-resolution: 192dpi), screen and (min-width: 481px) and (min-resolution: 2dppx) {
   .head {
     background-image: -webkit-gradient(linear, left top, right top, from(var(--overlay-cl)), to(var(--overlay-cl))), url(../images/head_bckg/header_img_md-@2x.png);
     background-image: linear-gradient(to right, var(--overlay-cl), var(--overlay-cl)), url(../images/head_bckg/header_img_md-@2x.png);
+    background-image: -webkit-image-set(url(../images/head_bckg/header_img_md-@2x.webp) 2x);
   }
 }
 @media screen and (min-width: 769px) {
   .head {
     background-image: -webkit-gradient(linear, left top, right top, from(var(--overlay-cl)), to(var(--overlay-cl))), url(../images/head_bckg/header_img_lg-@1x.png);
     background-image: linear-gradient(to right, var(--overlay-cl), var(--overlay-cl)), url(../images/head_bckg/header_img_lg-@1x.png);
+    background-image: -webkit-image-set(url(../images/head_bckg/header_img_lg-@1x.webp) 1x);
   }
 }
 @media screen and (min-width: 769px) and (min-device-pixel-ratio: 2), screen and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 769px) and (min-resolution: 192dpi), screen and (min-width: 769px) and (min-resolution: 2dppx) {
   .head {
     background-image: -webkit-gradient(linear, left top, right top, from(var(--overlay-cl)), to(var(--overlay-cl))), url(../images/head_bckg/header_img_lg-@2x.png);
     background-image: linear-gradient(to right, var(--overlay-cl), var(--overlay-cl)), url(../images/head_bckg/header_img_lg-@2x.png);
+    background-image: -webkit-image-set(url(../images/head_bckg/header_img_lg-@2x.webp) 2x);
   }
 }
 @media screen and (min-width: 1200px) {
