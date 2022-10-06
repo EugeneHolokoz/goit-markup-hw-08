@@ -806,12 +806,18 @@ address {
   z-index: 3;
   top: 0;
   left: 0;
+  padding: 15px;
   width: 100%;
   height: 100%;
   background-color: var(--overlay-modal);
   opacity: 1;
   -webkit-transition: opacity var(--anim-fast);
   transition: opacity var(--anim-fast);
+}
+@media screen and (min-width: 768px) {
+  .backdrop {
+    padding: 0px;
+  }
 }
 
 .backdrop.is-hidden {
@@ -830,8 +836,8 @@ address {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100%;
-  height: 100%;
+  width: 290px;
+  height: 630px;
   padding: 40px;
   background-color: var(--main-bcg-cl);
   -webkit-box-shadow: 0px 1px 3px var(--box-shadow-blc-cl-12), 0px 1px 1px var(--box-shadow-blc-cl-14), 0px 2px 1px var(--box-shadow-blc-cl-02);
@@ -1150,7 +1156,7 @@ address {
 }
 @media screen and (min-width: 1200px) {
   .subscription {
-    margin: 10px 0 0 0;
+    width: auto;
   }
 }
 
@@ -1280,7 +1286,8 @@ address {
   background-color: var(--head-bcg-cl);
   background-image: -webkit-gradient(linear, left top, right top, from(var(--overlay-cl)), to(var(--overlay-cl))), url(../images/head_bckg/header_img_sm-@1x.png);
   background-image: linear-gradient(to right, var(--overlay-cl), var(--overlay-cl)), url(../images/head_bckg/header_img_sm-@1x.png);
-  background-image: -webkit-image-set(url(../images/head_bckg/header_img_sm-@1x.webp) 1x);
+  background-image: -webkit-gradient(linear, left top, right top, from(var(--overlay-cl)), to(var(--overlay-cl))), -webkit-image-set(url(../images/head_bckg/header_img_sm-@1x.webp) 1x);
+  background-image: linear-gradient(to right, var(--overlay-cl), var(--overlay-cl)), -webkit-image-set(url(../images/head_bckg/header_img_sm-@1x.webp) 1x);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1289,35 +1296,40 @@ address {
   .head {
     background-image: -webkit-gradient(linear, left top, right top, from(var(--overlay-cl)), to(var(--overlay-cl))), url(../images/head_bckg/header_img_sm-@2x.png);
     background-image: linear-gradient(to right, var(--overlay-cl), var(--overlay-cl)), url(../images/head_bckg/header_img_sm-@2x.png);
-    background-image: -webkit-image-set(url(../images/head_bckg/header_img_sm-@2x.webp) 2x);
+    background-image: -webkit-gradient(linear, left top, right top, from(var(--overlay-cl)), to(var(--overlay-cl))), -webkit-image-set(url(../images/head_bckg/header_img_sm-@2x.webp) 2x);
+    background-image: linear-gradient(to right, var(--overlay-cl), var(--overlay-cl)), -webkit-image-set(url(../images/head_bckg/header_img_sm-@2x.webp) 2x);
   }
 }
 @media screen and (min-width: 481px) {
   .head {
     background-image: -webkit-gradient(linear, left top, right top, from(var(--overlay-cl)), to(var(--overlay-cl))), url(../images/head_bckg/header_img_md-@1x.png);
     background-image: linear-gradient(to right, var(--overlay-cl), var(--overlay-cl)), url(../images/head_bckg/header_img_md-@1x.png);
-    background-image: -webkit-image-set(url(../images/head_bckg/header_img_md-@1x.webp) 1x);
+    background-image: -webkit-gradient(linear, left top, right top, from(var(--overlay-cl)), to(var(--overlay-cl))), -webkit-image-set(url(../images/head_bckg/header_img_md-@1x.webp) 1x);
+    background-image: linear-gradient(to right, var(--overlay-cl), var(--overlay-cl)), -webkit-image-set(url(../images/head_bckg/header_img_md-@1x.webp) 1x);
   }
 }
 @media screen and (min-width: 481px) and (min-device-pixel-ratio: 2), screen and (min-width: 481px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 481px) and (min-resolution: 192dpi), screen and (min-width: 481px) and (min-resolution: 2dppx) {
   .head {
     background-image: -webkit-gradient(linear, left top, right top, from(var(--overlay-cl)), to(var(--overlay-cl))), url(../images/head_bckg/header_img_md-@2x.png);
     background-image: linear-gradient(to right, var(--overlay-cl), var(--overlay-cl)), url(../images/head_bckg/header_img_md-@2x.png);
-    background-image: -webkit-image-set(url(../images/head_bckg/header_img_md-@2x.webp) 2x);
+    background-image: -webkit-gradient(linear, left top, right top, from(var(--overlay-cl)), to(var(--overlay-cl))), -webkit-image-set(url(../images/head_bckg/header_img_md-@2x.webp) 2x);
+    background-image: linear-gradient(to right, var(--overlay-cl), var(--overlay-cl)), -webkit-image-set(url(../images/head_bckg/header_img_md-@2x.webp) 2x);
   }
 }
 @media screen and (min-width: 769px) {
   .head {
     background-image: -webkit-gradient(linear, left top, right top, from(var(--overlay-cl)), to(var(--overlay-cl))), url(../images/head_bckg/header_img_lg-@1x.png);
     background-image: linear-gradient(to right, var(--overlay-cl), var(--overlay-cl)), url(../images/head_bckg/header_img_lg-@1x.png);
-    background-image: -webkit-image-set(url(../images/head_bckg/header_img_lg-@1x.webp) 1x);
+    background-image: -webkit-gradient(linear, left top, right top, from(var(--overlay-cl)), to(var(--overlay-cl))), -webkit-image-set(url(../images/head_bckg/header_img_lg-@1x.webp) 1x);
+    background-image: linear-gradient(to right, var(--overlay-cl), var(--overlay-cl)), -webkit-image-set(url(../images/head_bckg/header_img_lg-@1x.webp) 1x);
   }
 }
 @media screen and (min-width: 769px) and (min-device-pixel-ratio: 2), screen and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 769px) and (min-resolution: 192dpi), screen and (min-width: 769px) and (min-resolution: 2dppx) {
   .head {
     background-image: -webkit-gradient(linear, left top, right top, from(var(--overlay-cl)), to(var(--overlay-cl))), url(../images/head_bckg/header_img_lg-@2x.png);
     background-image: linear-gradient(to right, var(--overlay-cl), var(--overlay-cl)), url(../images/head_bckg/header_img_lg-@2x.png);
-    background-image: -webkit-image-set(url(../images/head_bckg/header_img_lg-@2x.webp) 2x);
+    background-image: -webkit-gradient(linear, left top, right top, from(var(--overlay-cl)), to(var(--overlay-cl))), -webkit-image-set(url(../images/head_bckg/header_img_lg-@2x.webp) 2x);
+    background-image: linear-gradient(to right, var(--overlay-cl), var(--overlay-cl)), -webkit-image-set(url(../images/head_bckg/header_img_lg-@2x.webp) 2x);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1609,12 +1621,16 @@ address {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
     gap: 93px;
   }
 }
 
 .tablet-wrap {
   display: block;
+  margin-bottom: 60px;
 }
 @media screen and (min-width: 768px) {
   .tablet-wrap {
@@ -1625,6 +1641,7 @@ address {
         -ms-flex-align: baseline;
             align-items: baseline;
     gap: 165px;
+    margin-bottom: 0px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1678,7 +1695,6 @@ address {
 
 .socials-wrap {
   text-align: center;
-  margin-bottom: 60px;
 }
 @media screen and (min-width: 768px) {
   .socials-wrap {
@@ -1696,21 +1712,35 @@ address {
       -ms-flex-pack: start;
           justify-content: flex-start;
   gap: 8px;
-  width: 325px;
+}
+@media screen and (max-width: 767px) {
+  .filter {
+    max-width: 325px;
+  }
 }
 @media screen and (min-width: 768px) {
   .filter {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+    width: 100%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    width: 100%;
   }
 }
 
 .filter--margin-bottom {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  .filter--margin-bottom {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .filter--margin-bottom {
+    margin-bottom: 50px;
+  }
 }
 
 .filter__btn {
@@ -1777,6 +1807,19 @@ address {
   transition: box-shadow var(--anim-fast);
   transition: box-shadow var(--anim-fast), -webkit-box-shadow var(--anim-fast);
 }
+@media screen and (min-width: 768px) {
+  .portfolio__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 .portfolio__link:hover, .portfolio__link:focus {
   -webkit-box-shadow: 0px 1px 1px var(--box-shadow-blc-cl-12), 0px 4px 4px var(--box-shadow-blc-cl-06), 1px 4px 6px var(--box-shadow-blc-cl-16);
           box-shadow: 0px 1px 1px var(--box-shadow-blc-cl-12), 0px 4px 4px var(--box-shadow-blc-cl-06), 1px 4px 6px var(--box-shadow-blc-cl-16);
@@ -1822,6 +1865,21 @@ address {
   border-left: 1px solid var(--border-secondary-cl);
   border-right: 1px solid var(--border-secondary-cl);
 }
+@media screen and (min-width: 768px) {
+  .portfolio__img-desc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    gap: 4px;
+  }
+}
 
 .portfolio__img-title {
   font-weight: 700;
@@ -1829,6 +1887,11 @@ address {
   line-height: 2;
   letter-spacing: 0.06em;
   margin-bottom: 4px;
+}
+@media screen and (min-width: 768px) {
+  .portfolio__img-title {
+    margin-bottom: 0px;
+  }
 }
 
 .portfolio__img-txt {

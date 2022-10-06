@@ -17,17 +17,20 @@
         @media screen and (min-width: 1200px) {
         flex-wrap: nowrap;
         justify-content: flex-start;
+        align-items: baseline;
         gap: 93px;
     }
 }
 
 .tablet-wrap {
     display: block;
+    margin-bottom: 60px;
 
     @media screen and (min-width: 768px) {
         display: flex;
         align-items: baseline;
         gap: 165px;
+        margin-bottom: 0px;
     }
 
     @media screen and (min-width: 1200px) {
@@ -77,7 +80,6 @@
 
 .socials-wrap {
     text-align: center;
-    margin-bottom: 60px;
 
     @media screen and (min-width: 768px) {
         margin-bottom: 0px;
