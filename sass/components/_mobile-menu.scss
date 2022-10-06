@@ -122,12 +122,16 @@
 
 .mobile-socials {
     display: flex;
-    gap: 20px;
     flex-wrap: wrap;
 }
 
-.mobile-contacts__item {
+.mobile-socials__item:not(:last-child) {
+    padding-right: 10px;
+    border-right: 1px solid var(--form-border-clr);
+}
 
+.mobile-socials__item:not(:first-child) {
+    padding-left: 10px;
 }
 
 .mobile-socials__link {
@@ -139,14 +143,14 @@
     color: var(--accent-txt-cl);
 
 
-    &--bordered::after {
-        content: "";
-        position: absolute;
-        display: block;
-        height: 22px;
-        right: -15%;
-        top: 0%;
-        border: 1px solid var(--form-border-clr);
-        transform: rotate(180deg);
-    }
+    // &--bordered::after {
+    //     content: "";
+    //     position: absolute;
+    //     display: block;
+    //     height: 22px;
+    //     right: -15%;
+    //     top: 0%;
+
+    //     transform: rotate(180deg);
+    // }
 }
